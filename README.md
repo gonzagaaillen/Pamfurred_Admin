@@ -3,16 +3,15 @@
 ## Project setup
 ```
 npm install
+npm run build
+npm install vue-router@next
+npm install chart.js
+npm install vue-chartjs
 ```
 
-### Compiles and hot-reloads for development
+### Run the Browser
 ```
 npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
 ```
 
 ### Customize configuration
