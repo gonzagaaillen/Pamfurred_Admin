@@ -4,7 +4,7 @@ import Dashboard from '@/components/Dashboard.vue';
 
 const routes = [
   { path: '/Login', component: LogIn },
-  { path: '/dashboard', component: Dashboard },
+  { path: '/Dashboard', component: Dashboard },
   // Add other routes here
 ];
 

@@ -1,7 +1,7 @@
 <template>
     <div class="login-container">
       <img src="@/assets/PamfurredLogo.png" alt="Pamfurred Logo" class="logo" />
-      <form class="login-form">
+      <form class="login-form" @submit="handleLogin">
         <div class="input-group">
           <i class="fas fa-user"></i>
           <input type="text" placeholder="Username" />
@@ -17,9 +17,26 @@
   </template>
   
   <script>
+  import { useRouter } from 'vue-router';
+
   export default {
-    name: 'LogIn',
-  };
+  name: 'LogIn',
+  setup() {
+    const router = useRouter();
+    
+    const handleLogin = async (event) => {
+      event.preventDefault();
+      // Perform login logic here (e.g., check credentials)
+      
+      // If successful, redirect to the dashboard
+      router.push('/Dashboard');
+    };
+    
+    return {
+      handleLogin,
+    };
+  },
+};
   </script>
   
   <style scoped>
